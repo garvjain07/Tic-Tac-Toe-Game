@@ -1,0 +1,167 @@
+/* Score Board Styles */
+.scoreboard {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  width: 100%;
+  max-width: 400px;
+}
+
+.scoreboard-content {
+  color: white;
+}
+
+.scoreboard-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.scores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.score-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.score-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.score-icon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.score-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.score-label {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.score-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.player1 {
+  border-left: 3px solid #ff6b6b;
+}
+
+.draws {
+  border-left: 3px solid #ffd93d;
+}
+
+.player2 {
+  border-left: 3px solid #6bcf7f;
+}
+
+.reset-button {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  padding: 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-weight: 500;
+}
+
+.reset-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scoreboard {
+    padding: 15px;
+  }
+  
+  .scores-grid {
+    gap: 10px;
+  }
+  
+  .score-item {
+    padding: 12px 8px;
+  }
+  
+  .score-icon {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+  }
+  
+  .score-value {
+    font-size: 1.3rem;
+  }
+  
+  .score-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scores-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .score-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    padding: 10px 15px;
+  }
+  
+  .score-icon {
+    margin-bottom: 0;
+    font-size: 2rem;
+    min-width: 40px;
+  }
+  
+  .score-info {
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .score-label {
+    font-size: 0.9rem;
+  }
+  
+  .score-value {
+    font-size: 1.5rem;
+  }
+}
